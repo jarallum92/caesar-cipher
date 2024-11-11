@@ -7,13 +7,16 @@ def caesar_cipher(text, shift):
 
     for char in sentence:
         if char.islower():
+            # shifting the letters in the sentence
             encrypted_sentence += chr((ord(char) + shift - 97) % 26 + 97)
         else:
-            encrypted_sentence += char
+            encrypted_sentence += char 
+            # keeping the non letters where they are
 
     return encrypted_sentence
     
-shift = 5
+shift = 5 
+# the amount of letters shifting
 sentence = input("Please enter a sentence: ")
 text = sentence.lower()
 
